@@ -89,7 +89,7 @@ def goruntu(filename):
     screenCnt=fonk.konturIslemi(img,gen_goruntu)
     yeni_goruntu=fonk.maskelemeIslemi(img_gray,img,screenCnt)
     son_goruntu = fonk.plakaIyilestir(yeni_goruntu)
-    os.chdir('C:/Users/Lenovo/Desktop/elif_license_plate/static/saved')
+    os.chdir('static/saved')
     cv2.imwrite(filename,son_goruntu)
 
 @app.route('/resim', methods=['POST'])
@@ -104,7 +104,7 @@ def upload_image():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        os.chdir('C:/Users/Lenovo/Desktop/elif_license_plate/static/uploads')
+        os.chdir('static/uploads')
         
 
         flash('Image successfully uploaded and displayed below')
