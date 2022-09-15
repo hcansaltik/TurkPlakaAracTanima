@@ -24,7 +24,7 @@ def allowed_file(filename):
 
 def kamera():
     
-    license_cascade = cv2.CascadeClassifier('C:/Users/Lenovo/Desktop/elif_license_plate/license_plate_cascade/cascade.xml') 
+    license_cascade = cv2.CascadeClassifier('license_plate_cascade/cascade.xml') 
   
   
     # capture frames from a camera 
